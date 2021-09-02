@@ -1,0 +1,9 @@
+body {
+  background-color: red;
+}
+
+p {
+  font-size: 10px;
+  font-family: "Courier New", Courier, monospace;
+  border: 1px solid black;
+}

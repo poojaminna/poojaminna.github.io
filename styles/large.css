@@ -1,0 +1,9 @@
+body {
+  background-color: blue;
+}
+
+p {
+  font-size: 22px;
+  font-family: "Times New Roman", Times, serif;
+  border: 3px solid yellow;
+}

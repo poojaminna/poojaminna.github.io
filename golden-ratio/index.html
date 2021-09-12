@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Copy</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <!-- <input
+      type="text"
+      id="num"
+      placeholder="Enter number of boxes you want"
+      onkeypress="cp(event)"
+    />
+    <input type="text" id="hei" placeholder="Enter height of container" />
+    <div id="hei"></div> -->
+
+    <button id="grey">Grey</button>
+    <button id="rand">Random</button>
+    <div id="res"></div>
+    <script>
+      //   let n;
+      //   function cp(event) {
+      //     if (event.keyCode == 13) {
+      //       let num = document.getElementById("num").value;
+      //       n = num;
+      //     }
+      //   }
+      //   let wid = document.getElementById("wid");
+      let container = document.getElementById("container");
+      //   container.style.width = wid.value;
+      let parent = container;
+      let colour = 200;
+      //   console.log(n);
+      for (let i = 0; i < 16; i++) {
+        let divBlock = document.createElement("div");
+        if (i % 4 == 0) divBlock.className = "cycle";
+
+        grey.addEventListener("click", function () {
+          divBlock.style.background = `rgb(${colour}, ${colour}, ${colour})`;
+          colour = colour - 15;
+          grey.disabled = true;
+          rand.disabled = false;
+        });
+
+        rand.addEventListener("click", function () {
+          let randomBetween = (min, max) =>
+            Math.floor(Math.random() * (max - min + 1) + min);
+
+          const color = [
+            randomBetween(0, 255),
+            randomBetween(0, 255),
+            randomBetween(0, 255),
+          ];
+          divBlock.style.background = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+          grey.disabled = false;
+          colour = 200;
+          rand.disabled = true;
+        });
+
+        parent.appendChild(divBlock);
+        parent = divBlock;
+      }
+    </script>
+  </body>
+</html>

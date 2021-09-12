@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Number Converter</h1>
+    <div class="container">
+      <div class="up">
+        <div class="left_up">
+          <p><label>From:</label></p>
+          <select id="from">
+            <option value="Select">Select</option>
+            <option value="Binary">Binary</option>
+            <option value="Decimal">Decimal</option>
+          </select>
+        </div>
+        <div class="right_up">
+          <p><label>To:</label></p>
+          <select id="to">
+            <option value="Select">Select</option>
+            <option value="Binary">Binary</option>
+            <option value="Decimal">Decimal</option>
+            <option value="Hexadecimal">Hexadecimal</option>
+          </select>
+        </div>
+      </div>
+      <form onsubmit="convertFun()">
+        <div class="down">
+          <div id="fill">Enter value</div>
+          <input type="text" id="question" />
+          <input id="convert" type="submit" value="Convert" />
+        </div>
+      </form>
+      <div class="result">
+        <label>Result</label>
+        <div id="res"></div>
+      </div>
+    </div>
+    <footer>
+      <p>&copy Pooja Minna</p>
+    </footer>
+    <script>
+      let f = "",
+        t = "";
+      let fill = document.getElementById("fill");
+      let res = document.getElementById("res");
+      let from = document.getElementById("from");
+      let q = document.getElementById("question");
+      let btn = document.getElementById("convert");
+      from.addEventListener("change", function () {
+        f = from.value;
+        res.innerText = "";
+        check();
+      });
+      let to = document.getElementById("to");
+      to.addEventListener("change", function () {
+        t = to.value;
+        res.innerText = "";
+        check();
+      });
+
+      function fromBinary(value) {
+        let ans = 0,
+          p = 0;
+        for (let i = value.length - 1; i >= 0; i--) {
+          if (value[i] == "0" || value[i] == "1") {
+            if (value[i] == "1") {
+              ans += Math.pow(2, p);
+            }
+            p++;
+          } else return "Enter a binary number";
+        }
+        return ans;
+      }
+
+      function get(value, ch) {
+        if (value < ch) {
+          if (value >= 10) {
+            value = String.fromCharCode(65 + value - 10);
+          }
+          return value + "";
+        }
+        let d = value % ch;
+        if (d >= 10) {
+          d = String.fromCharCode(65 + d - 10);
+        }
+        return get(Math.floor(value / ch), ch) + d + "";
+      }
+      function fromDecimal(value, ch) {
+        let ans = 0;
+        for (let i = 0; i < value.length; i++) {
+          if (value[i] >= 0 && value[i] <= 9) continue;
+          else return "Enter Decimal number.";
+        }
+        return get(parseInt(value), ch);
+      }
+      function convertFun() {
+        if (f == "Binary" && t == "Decimal") {
+          let ans = fromBinary(q.value);
+          console.log(ans);
+          res.innerText = ans;
+        } else if (f == "Decimal" && t == "Binary") {
+          let ans = fromDecimal(q.value, 2);
+          console.log(ans);
+          res.innerText = ans;
+        } else if (f == "Binary" && t == "Hexadecimal") {
+          let ans = fromBinary(q.value);
+          ans = fromDecimal(ans, 16);
+          res.innerText = ans;
+        } else if (f == "Decimal" && t == "Hexadecimal") {
+          let ans = fromDecimal(q.value, 16);
+          res.innerText = ans;
+        } else {
+          res.innerText = "Cannot convert! Try again.";
+          fill.innerText = "Enter value";
+        }
+      }
+      function check() {
+        if (f == "Binary" && (t == "Decimal" || t == "Hexadecimal")) {
+          fill.innerText = "Enter Binary number";
+          res.innerText = "";
+        } else if (f == "Decimal" && (t == "Binary" || t == "Hexadecimal")) {
+          fill.innerText = "Enter Decimal number";
+          res.innerText = "";
+        } else if (f == t) {
+          res.innerText = "Cannot convert! Try again.";
+          fill.innerText = "Enter value";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -175,3 +175,10 @@ span {
     margin: 50px auto;
   }
 }
+
+@media (min-width: 1010px) {
+  .full {
+    width: 50%;
+    margin: 50px auto;
+  }
+}

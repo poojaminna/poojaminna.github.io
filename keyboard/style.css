@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.full {
+  width: 60%;
+  margin: 50px auto;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  font-size: xx-large;
+}
+.screen {
+  width: 100%;
+  margin-bottom: 40px;
+  border: 2px solid grey;
+  height: 80px;
+  border-radius: 5px;
+  font-size: large;
+  color: blue;
+  overflow: scroll;
+  background-color: rgb(212, 209, 209);
+}
+
+.row {
+  padding: 2px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row > div {
+  padding: 1px;
+  border: 1px solid rgb(167, 159, 159);
+  background-color: rgb(226, 215, 215);
+  color: black;
+  margin: 2px;
+  border-radius: 5px;
+}
+
+.double {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.size {
+  width: 40px;
+  height: 40px;
+}
+
+.size5 {
+  width: 40px;
+  height: 19px;
+  margin: 0 0 1px 0;
+  background-color: rgb(226, 215, 215);
+  border: 1px solid rgb(167, 159, 159);
+}
+#up_down {
+  border: none;
+  background-color: rgb(238, 236, 236);
+}
+
+#up {
+  border-radius: 5px 5px 0 0;
+}
+#down {
+  border-radius: 0 0 5px 5px;
+}
+
+.size1 {
+  width: 60px;
+  height: 40px;
+}
+
+.size2 {
+  width: 75px;
+  height: 40px;
+}
+
+.size3 {
+  width: 100px;
+  height: 40px;
+}
+
+.size4 {
+  width: 257px;
+  height: 40px;
+}
+
+body {
+  font-size: small;
+  background-color: rgb(15, 10, 10);
+}
+
+.keyboard {
+  background-color: rgb(238, 236, 236);
+  border: 2px solid grey;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#circle1,
+#circle2 {
+  /* display: inline; */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+span {
+  color: white;
+}
+.status {
+  display: flex;
+  gap: 10px;
+}
+
+.container {
+  width: 100%;
+  margin: 10px;
+}
+
+.copyright {
+  width: 100%;
+  background-color: white;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+@media (max-width: 800px) {
+  .full {
+    width: 70%;
+    margin: 50px auto;
+  }
+}
+
+@media (max-width: 470px) {
+  .full {
+    width: 90%;
+    margin: 50px auto;
+  }
+}
+
+@media (max-width: 460px) {
+  .full {
+    width: 95%;
+    margin: 50px auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .full {
+    width: 110%;
+    margin: 50px auto;
+  }
+}
+
+@media (max-width: 335px) {
+  .full {
+    width: 130%;
+    margin: 50px auto;
+  }
+}

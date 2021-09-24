@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual keyboard</title>
+    <script
+      src="https://kit.fontawesome.com/3b2a311266.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="full">
+      <div class="heading">
+        <p>Virtual Keyboard</p>
+      </div>
+      <div class="screen" autofocus>
+        <!-- <textarea class="screen"></textarea> -->
+      </div>
+      <div class="container">
+        <div class="status">
+          <div id="circle1"></div>
+          <span>shift</span>
+          <div id="circle2"></div>
+          <span>caps lock</span>
+        </div>
+      </div>
+      <div class="keyboard">
+        <div class="row1 row">
+          <div id="esc" role="button" class="size1" onclick="cannot()">
+            <div>esc</div>
+          </div>
+          <div id="F1" role="button" class="size double" onclick="cannot()">
+            <div><i class="fas fa-sun"></i></div>
+            <div>F1</div>
+          </div>
+          <div id="F2" role="button" class="size double" onclick="cannot()">
+            <div><i class="far fa-sun"></i></div>
+            <div>F2</div>
+          </div>
+          <div id="F3" role="button" class="size" onclick="cannot()">
+            <div>F3</div>
+          </div>
+          <div id="F4" role="button" class="size" onclick="cannot()">
+            <div>F4</div>
+          </div>
+          <div id="F5" role="button" class="size" onclick="cannot()">
+            <div>F5</div>
+          </div>
+          <div id="F6" role="button" class="size" onclick="cannot()">
+            <div>F6</div>
+          </div>
+          <div id="F7" role="button" class="size double" onclick="cannot()">
+            <div><i class="fas fa-backward"></i></div>
+
+            <div>F7</div>
+          </div>
+          <div id="F8" role="button" class="size double" onclick="cannot()">
+            <div><i class="fas fa-play"></i></div>
+
+            <div>F8</div>
+          </div>
+          <div id="F9" role="button" class="size double" onclick="cannot()">
+            <div><i class="fas fa-forward"></i></div>
+            <div>F9</div>
+          </div>
+          <div id="F10" role="button" class="size double" onclick="cannot()">
+            <div><i class="fas fa-volume-mute"></i></div>
+            <div>F10</div>
+          </div>
+          <div id="F11" role="button" class="size double" onclick="cannot()">
+            <div><i class="fas fa-volume-down"></i></div>
+            <div>F11</div>
+          </div>
+          <div id="F12" role="button" class="size double" onclick="cannot()">
+            <div><i class="fas fa-volume-up"></i></div>
+            <div>F12</div>
+          </div>
+          <div id="icon" role="button" class="size" onclick="cannot()">
+            <div><i class="fas fa-volume-up"></i></div>
+          </div>
+        </div>
+        <div class="row2 row">
+          <div
+            id="backtik"
+            role="button"
+            class="size double"
+            onclick="double(this)"
+          >
+            <div>~</div>
+            <div>`</div>
+          </div>
+          <div id="1" role="button" class="size double" onclick="double(this)">
+            <div>!</div>
+            <div>1</div>
+          </div>
+          <div id="2" role="button" class="size double" onclick="double(this)">
+            <div>@</div>
+            <div>2</div>
+          </div>
+          <div id="3" role="button" class="size double" onclick="double(this)">
+            <div>#</div>
+            <div>3</div>
+          </div>
+          <div id="4" role="button" class="size double" onclick="double(this)">
+            <div>$</div>
+            <div>4</div>
+          </div>
+          <div id="5" role="button" class="size double" onclick="double(this)">
+            <div>%</div>
+            <div>5</div>
+          </div>
+          <div id="6" role="button" class="size double" onclick="double(this)">
+            <div>^</div>
+            <div>6</div>
+          </div>
+          <div id="7" role="button" class="size double" onclick="double(this)">
+            <div>&</div>
+            <div>7</div>
+          </div>
+          <div id="8" role="button" class="size double" onclick="double(this)">
+            <div>*</div>
+            <div>8</div>
+          </div>
+          <div id="9" role="button" class="size double" onclick="double(this)">
+            <div>(</div>
+            <div>9</div>
+          </div>
+          <div id="0" role="button" class="size double" onclick="double(this)">
+            <div>)</div>
+            <div>0</div>
+          </div>
+          <div id="-" role="button" class="size double" onclick="double(this)">
+            <div id="underscore">_</div>
+            <div>-</div>
+          </div>
+          <div id="=" role="button" class="size double" onclick="double(this)">
+            <div>+</div>
+            <div>=</div>
+          </div>
+          <div id="delete" role="button" class="size1" onclick="backspace()">
+            <div>delete</div>
+          </div>
+        </div>
+        <div class="row3 row">
+          <div id="tab" role="button" class="size1" onclick="tab()">
+            <div>tab</div>
+          </div>
+          <div id="Q" role="button" class="size" onclick="letter(this)">
+            <div>Q</div>
+          </div>
+          <div id="W" role="button" class="size" onclick="letter(this)">
+            <div>W</div>
+          </div>
+          <div id="E" role="button" class="size" onclick="letter(this)">
+            <div>E</div>
+          </div>
+          <div id="R" role="button" class="size" onclick="letter(this)">
+            <div>R</div>
+          </div>
+          <div id="T" role="button" class="size" onclick="letter(this)">
+            <div>T</div>
+          </div>
+          <div id="Y" role="button" class="size" onclick="letter(this)">
+            <div>Y</div>
+          </div>
+          <div id="U" role="button" class="size" onclick="letter(this)">
+            <div>U</div>
+          </div>
+          <div id="I" role="button" class="size" onclick="letter(this)">
+            <div>I</div>
+          </div>
+          <div id="O" role="button" class="size" onclick="letter(this)">
+            <div>O</div>
+          </div>
+          <div id="P" role="button" class="size" onclick="letter(this)">
+            <div>P</div>
+          </div>
+          <div id="[" role="button" class="size double" onclick="double(this)">
+            <div>{</div>
+            <div>[</div>
+          </div>
+          <div id="]" role="button" class="size double" onclick="double(this)">
+            <div>}</div>
+            <div>]</div>
+          </div>
+          <div id="\" role="button" class="size double" onclick="double(this)">
+            <div>|</div>
+            <div>\</div>
+          </div>
+        </div>
+        <div class="row4 row">
+          <div
+            id="capsLock"
+            role="button"
+            class="size2"
+            onclick="activateCaps()"
+          >
+            <div>caps lock</div>
+          </div>
+          <div id="A" role="button" class="size" onclick="letter(this)">
+            <div>A</div>
+          </div>
+          <div id="S" role="button" class="size" onclick="letter(this)">
+            <div>S</div>
+          </div>
+          <div id="E" role="button" class="size" onclick="letter(this)">
+            <div>E</div>
+          </div>
+          <div id="F" role="button" class="size" onclick="letter(this)">
+            <div>F</div>
+          </div>
+          <div id="G" role="button" class="size" onclick="letter(this)">
+            <div>G</div>
+          </div>
+          <div id="H" role="button" class="size" onclick="letter(this)">
+            <div>H</div>
+          </div>
+          <div id="J" role="button" class="size" onclick="letter(this)">
+            <div>J</div>
+          </div>
+          <div id="K" role="button" class="size" onclick="letter(this)">
+            <div>K</div>
+          </div>
+          <div id="L" role="button" class="size" onclick="letter(this)">
+            <div>L</div>
+          </div>
+          <div
+            id=";"
+            role="button"
+            class="size"
+            class="double"
+            onclick="double(this)"
+          >
+            <div>:</div>
+            <div>;</div>
+          </div>
+          <div id="'" role="button" class="size double" onclick="double(this)">
+            <div>"</div>
+            <div>'</div>
+          </div>
+          <div id="enter" role="button" class="size2" onclick="enter()">
+            <div>enter</div>
+          </div>
+        </div>
+        <div class="row5 row">
+          <div
+            id="shift1"
+            role="button"
+            class="size3 shift"
+            onclick="activateShift()"
+          >
+            <div>shift</div>
+          </div>
+          <div id="Z" role="button" class="size" onclick="letter(this)">
+            <div>Z</div>
+          </div>
+          <div id="X" role="button" class="size" onclick="letter(this)">
+            <div>X</div>
+          </div>
+          <div id="C" role="button" class="size" onclick="letter(this)">
+            <div>C</div>
+          </div>
+          <div id="V" role="button" class="size" onclick="letter(this)">
+            <div>V</div>
+          </div>
+          <div id="B" role="button" class="size" onclick="letter(this)">
+            <div>B</div>
+          </div>
+          <div id="N" role="button" class="size" onclick="letter(this)">
+            <div>N</div>
+          </div>
+          <div id="M" role="button" class="size" onclick="letter(this)">
+            <div>M</div>
+          </div>
+          <div id="," role="button" class="size double" onclick="double(this)">
+            <div><</div>
+            <div>,</div>
+          </div>
+          <div id="." role="button" class="size double" onclick="double(this)">
+            <div>></div>
+            <div>.</div>
+          </div>
+          <div id="/" role="button" class="size double" onclick="double(this)">
+            <div>?</div>
+            <div>/</div>
+          </div>
+          <div
+            id="shift2"
+            role="button"
+            class="size3 shift"
+            onclick="activateShift()"
+          >
+            <div>shift</div>
+          </div>
+        </div>
+        <div class="row6 row">
+          <div id="function" role="button" class="size" onclick="cannot()">
+            <div>fn</div>
+          </div>
+          <div id="control" role="button" class="size" onclick="cannot()">
+            <div>control</div>
+          </div>
+          <div id="option" role="button" class="size" onclick="cannot()">
+            <div>option</div>
+          </div>
+          <div id="cmd" role="button" class="size" onclick="cannot()">
+            <div>cmd</div>
+          </div>
+          <div id="spacebar" role="button" class="size4">
+            <div id="spacebar"></div>
+          </div>
+          <div id="cmd" role="button" class="size" onclick="cannot()">
+            <div>cmd</div>
+          </div>
+          <div id="option" role="button" class="size" onclick="cannot()">
+            <div>option</div>
+          </div>
+          <div id="left" role="button" class="size">
+            <div><i class="fas fa-arrow-left"></i></div>
+          </div>
+          <div id="up_down" class="double">
+            <div id="up" class="size5" role="button">
+              <i class="fas fa-arrow-up"></i>
+            </div>
+            <div id="down" class="size5" role="button">
+              <i class="fas fa-arrow-down"></i>
+            </div>
+          </div>
+          <div id="right" role="button" class="size">
+            <div><i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy Pooja Minna</p>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

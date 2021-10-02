@@ -41,9 +41,16 @@
   padding: 1px;
   border: 1px solid rgb(167, 159, 159);
   background-color: rgb(226, 215, 215);
+  /* background-color: red; */
   color: black;
   margin: 2px;
   border-radius: 5px;
+}
+
+.row > div:hover {
+  background-color: rgb(245, 182, 182);
+  cursor: pointer;
+  box-shadow: 0 0 10px red;
 }
 
 .double {
@@ -70,6 +77,10 @@
   background-color: rgb(238, 236, 236);
 }
 
+#up_down {
+  box-shadow: none;
+}
+
 #up {
   border-radius: 5px 5px 0 0;
 }
@@ -77,6 +88,16 @@
   border-radius: 0 0 5px 5px;
 }
 
+#up:hover {
+  background-color: rgb(245, 182, 182);
+  box-shadow: 0 0 10px red;
+  cursor: pointer;
+}
+#down:hover {
+  background-color: rgb(245, 182, 182);
+  box-shadow: 0 0 10px red;
+  cursor: pointer;
+}
 .size1 {
   width: 60px;
   height: 40px;
@@ -141,6 +162,7 @@ span {
   align-items: center;
   padding: 10px;
 }
+
 @media (max-width: 800px) {
   .full {
     width: 70%;

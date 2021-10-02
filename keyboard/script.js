@@ -28,10 +28,20 @@ function backspace() {
   makeShift0();
 }
 
+function space() {
+  let box = document.getElementsByClassName("screen")[0];
+  let data = box.innerText;
+  let s = document.getElementById("space").innerText;
+  data = data + s;
+  box.innerText = data;
+  makeShift0();
+}
+
 function tab() {
   let box = document.getElementsByClassName("screen")[0];
   let data = box.innerText;
-  data = data + "  a  ";
+  let s = document.getElementById("tab1").innerText;
+  data = data + s;
   box.innerText = data;
   makeShift0();
 }
@@ -49,7 +59,7 @@ function activateCaps() {
   let circle = document.getElementById("circle2");
   if (caps == 1) {
     caps = 0;
-    circle.style = "background-color: white";
+    circle.style = "background-color: black";
   } else {
     caps = 1;
     circle.style = "background-color: green";
@@ -70,25 +80,23 @@ function activateShift() {
 function makeShift0() {
   shift = 0;
   let circle = document.getElementById("circle1");
-  circle.style = "background-color: white";
+  circle.style = "background-color: black";
 }
 
 let s1 = document.getElementById("shift1");
 s1.addEventListener("click", function () {
   let circle = document.getElementById("circle1");
   if (shift == 1) {
-    console.log("green");
     circle.style = "background-color: green";
-  } else circle.style = "background-color: white";
+  } else circle.style = "background-color: black";
 });
 
 let s2 = document.getElementById("shift2");
 s2.addEventListener("click", function () {
   let circle = document.getElementById("circle1");
   if (shift == 1) {
-    console.log("green");
     circle.style = "background-color: green";
   } else {
-    circle.style = "background-color: white";
+    circle.style = "background-color: black";
   }
 });

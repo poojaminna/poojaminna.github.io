@@ -138,3 +138,32 @@ header,
 .Timerform input {
   width: 40px;
 }
+
+@media (max-width: 400px) {
+  .heading {
+    width: 100%;
+    color: white;
+    font-size: large;
+  }
+
+  span,
+  p {
+    color: blue;
+    font-size: large;
+  }
+
+  .Timerform span {
+    font-size: x-small;
+    color: rgb(126, 121, 121);
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 320px) {
+  span,
+  p {
+    color: blue;
+    font-size: small;
+  }
+}

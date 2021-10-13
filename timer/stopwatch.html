@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3b2a311266.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header><div class="heading">Stop Watch</div></header>
+      <div class="Timercontent">
+        <form class="mainTimerform">
+          <div class="Timerform">
+            <div class="Timertime">
+              <input type="number" placeholder="00" id="Stophour" />
+              <!-- <div id="Timerhour">00</div> -->
+              <span>Minutes</span>
+            </div>
+
+            <div class="Timertime">
+              <input
+                type="number"
+                placeholder="00"
+                id="Stopmin"
+                min="00"
+                max="59"
+              />
+              <!-- <div id="Timermin">00</div> -->
+              <span>Seconds</span>
+            </div>
+            <div class="Timertime">
+              <input
+                type="number"
+                placeholder="00"
+                id="Stopsec"
+                min="00"
+                max="59"
+              />
+              <!-- <div id="Timersec">00</div> -->
+              <span>Milli Sec</span>
+            </div>
+          </div>
+          <div class="Timercontrols">
+            <!-- <button onclick="Timercancel()" id="Timercancel">Cancel</button>
+            <button onclick="TimerRun()" id="Timerss">Start</button> -->
+            <div role="button" id="Timercancel" onclick="StopCancel(0)">
+              Reset
+            </div>
+            <div role="button" id="Stopss" onclick="StopRun()">Start</div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="down">
+      <footer>
+        <nav>
+          <ul>
+            <li>
+              <a href="./index.html">
+                <div><i class="far fa-clock"></i></div>
+                Clock</a
+              >
+            </li>
+            <li>
+              <a href="./timer.html"
+                ><div><i class="far fa-hourglass"></i></div>
+                Timer</a
+              >
+            </li>
+            <li>
+              <a href="./stopwatch.html" style="background-color: white"
+                ><div><i class="fas fa-stopwatch"></i></div>
+                Stopwatch</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </footer>
+      <div class="myself">
+        <p>&copy By Pooja Minna</p>
+      </div>
+    </div>
+    <script src="Stopwatchscript.js"></script>
+  </body>
+</html>

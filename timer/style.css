@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  bottom: 0px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid grey; */
+  gap: 5px;
+}
+
+a > div {
+  display: flex;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  border: 2px solid grey;
+  padding: 10px;
+}
+
+a:hover {
+  border-radius: 10px;
+}
+.wrapper {
+  width: 50%;
+  margin: 100px auto;
+  background-color: black;
+}
+.heading {
+  width: 100%;
+  color: white;
+  font-size: xx-large;
+}
+
+.down {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
+
+/* Clock */
+span,
+p {
+  color: blue;
+  font-size: larger;
+}
+
+header,
+.heading,
+.Clocktime,
+.Clockdate {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+}
+
+/* footer {
+  background-color: rgb(37, 37, 37);
+} */
+
+/* Footer */
+.myself {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 103px;
+}
+
+.myself > p {
+  color: black;
+  padding: 15px;
+  font-size: 15px;
+}
+
+/* Timer */
+.Timertime {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* justify-self: center; */
+}
+
+.Timerform {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.Timerform div {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.Timerform span {
+  font-size: small;
+  color: rgb(126, 121, 121);
+  display: flex;
+  justify-content: center;
+}
+
+.Timercontrols {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 5px;
+}
+
+.Timercontrols div {
+  /* color: white; */
+  background-color: #efefef;
+  padding: 4px;
+}
+
+.Timercontrols div:hover {
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.Timerform input {
+  width: 40px;
+}

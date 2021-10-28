@@ -75,7 +75,7 @@ function TimerRun(e) {
           }
         }
       }
-    }, 500);
+    }, 1000);
   } else {
     Timerstart = 1;
     let Timerss = document.getElementById("Timerss");

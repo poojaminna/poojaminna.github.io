@@ -8,6 +8,6 @@ setInterval(() => {
 setInterval(() => {
   let today = new Date();
   document.getElementById("Clockyear").innerText = today.getFullYear();
-  document.getElementById("Clockmonth").innerText = today.getMonth();
+  document.getElementById("Clockmonth").innerText = today.getMonth() + 1;
   document.getElementById("Clockdate").innerText = today.getDate();
 }, 1000);
